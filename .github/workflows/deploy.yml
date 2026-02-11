@@ -29,8 +29,14 @@ jobs:
       - name: Build
         run: npx hexo clean && npx hexo generate
 
+      - name: Disable Jekyll on Pages
+        run: |
+          touch public/.nojekyll
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: gh-pages
+          enable_jekyll: false
