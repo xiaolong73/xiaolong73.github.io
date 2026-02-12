@@ -8,3 +8,11 @@ favicon: /img/favicon.svg
 
 # 用于浏览器标签页的图标
 apple_touch_icon: /img/favicon.svg
+
+navbar:
+  blog_title: Mars73
+
+index:
+  slogan:
+    enable: true
+    text: "吃饭 睡觉"
